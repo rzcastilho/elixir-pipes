@@ -1,22 +1,27 @@
-# ElixirPipes
+# Elixir Pipes
 
-**TODO: Add description**
+Shows how to use pipes in Elixir.
 
-## Installation
+[Elixir Pipes - medium.com](https://medium.com/@rodrigo.zampieri/elixir-pipes-fa274992738e)
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir_pipes` to your list of dependencies in `mix.exs`:
+### Running
 
-```elixir
-def deps do
-  [
-    {:elixir_pipes, "~> 0.1.0"}
-  ]
-end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/elixir_pipes](https://hexdocs.pm/elixir_pipes).
-
-`Alcohol by volume (abbreviated as ABV, abv, or alc/vol)`
+$ git clone https://github.com/rzcastilho/elixir-pipes
+$ cd elixir-pipes
+$ mix deps.get
+$ iex -S mix
+iex(1)> ElixirPipes.pipe
+[
+  %{abv: 4.5, id: 1, name: "Buzz"},
+  %{abv: 4.1, id: 2, name: "Trashy Blonde"},
+  %{abv: 4.2, id: 3, name: "Berliner Weisse With Yuzu - B-Sides"},
+  %{abv: 6.3, id: 4, name: "Pilsen Lager"},
+  %{abv: 7.2, id: 5, name: "Avery Brown Dredge"},
+  %{abv: 5.2, id: 6, name: "Electric India"},
+  %{abv: 11.2, id: 7, name: "AB:12"},
+  %{abv: 4.7, id: 8, name: "Fake Lager"},
+  %{abv: 12.5, id: 9, name: "AB:07"},
+  %{abv: 7.5, id: 10, name: "Bramling X"}
+]
+```
