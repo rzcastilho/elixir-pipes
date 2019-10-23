@@ -1,5 +1,16 @@
 defmodule ElixirPipes do
 
+  def no_pipe do
+    Enum.map(String.split(String.upcase("Elixir: Pipe Operator")), fn word -> String.replace(word, ~r/[^A-Za-z0-9]/, "") end)
+  end
+
+  def pipe do
+    "Elixir: Pipe Operator"
+    |> String.upcase()
+    |> String.split()
+    |> Enum.map(fn word -> String.replace(word, ~r/[^A-Za-z0-9]/, "") end)
+  end
+
   def valid_line([_, _]), do: true
   def valid_line(_), do: false
 
@@ -10,7 +21,7 @@ defmodule ElixirPipes do
   def filter_success(%{status_code: 200}), do: true
   def filter_success(_), do: false
 
-  def pipe do
+  def beer_process do
     File.read!("beers.csv")
     |> String.split("\n")
     |> Enum.map(fn line -> String.split(line, ",") end)

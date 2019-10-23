@@ -11,7 +11,7 @@ $ git clone https://github.com/rzcastilho/elixir-pipes
 $ cd elixir-pipes
 $ mix deps.get
 $ iex -S mix
-iex(1)> ElixirPipes.pipe
+iex(1)> ElixirPipes.beer_process
 [
   %{abv: 4.5, id: 1, name: "Buzz"},
   %{abv: 4.1, id: 2, name: "Trashy Blonde"},
